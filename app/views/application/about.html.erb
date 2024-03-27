@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <main>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="<%= root_path %>">HOME</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="<%= about_path %>">About</a>
+          <a class="nav-link" href="<%=contact_path%>">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--container del titulo-->
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-center">About Yeeter</h1>
+      </div>
+    </div><!--end of container del tiutulo-->
+
+    <!--container del subtitulo-->
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p class="text-center" style="color: rgb(200,200,200);">Where the world connects</p>
+      </div>
+    </div><!--end of container del subtiutulo-->
+
+
+    <!--container of cards-->
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <div class="card"  style="width: 18rem;"> <!--start of card-->
+            <div class="card-body">
+              <h5 class="card-title">Description</h5>
+              <p class="card-text">Yeeter is an social media plataform were you can exchange ideas with other people,
+                share your thoughts and make new friends. This plataform is designed not to have likes so people doesn'
+                stress about this fact</p>
+              </p>
+            </div>
+          </div> <!--end of card-->
+        </div>
+        <div class="col-4">
+          <div class="card"  style="width: 18rem;"> <!--start of card-->
+            <div class="card-body">
+              <h5 class="card-title">History</h5>
+              <p class="card-text">Yeeter was founded in 2024 by Santiago Martinez, this project started
+                as a college project but it grew so much that it became a real plataform. At first there were only five people 
+                using it but now there are more than 1000 people enjoying this plataform.
+              </p>
+            </div>
+          </div> <!--end of card-->
+        </div>
+        <div class="col-4">
+          <div class="card"  style="width: 18rem;"> <!--start of card-->
+            <div class="card-body">
+              <h5 class="card-title">About creator</h5>
+              <p class="card-text">
+                Santiago Martinez is a computer science student at the Universidad de los Andes. He's a
+                passionate programmer and he loves to create new things. He started programing at the age of 15 and he has
+                made a lot of projects since then like a fake t$%/%er.
+              </p>
+            </div>
+          </div> <!--end of card-->
+        </div>
+      </div>
+    </div><!--end of container of cards-->
+    <main>
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">© Yeeter</span>
+      <%= link_to 'Insatgram',"#" , class: 'text-muted' %>
+      <%= link_to 'Facebook',"#" , class: 'text-muted' %>
+      <%= link_to 'Yeeter',"#" , class: 'text-muted' %>
+    </div>
+  </footer>

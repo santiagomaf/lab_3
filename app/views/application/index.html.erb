@@ -1,36 +1,103 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body >
+
+  <main class="flex-shrink-0">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="<%= root_path %>">HOME</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="<%= about_path %>">About</a>
+          <a class="nav-link" href="<%=contact_path%>">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  </nav>
+  <!--container del titulo-->
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2><img src="<%= asset_path('logo_lizard.png') %>" alt="Image Description" width="50" height="50">  Yitter</h2>
+        <p style="color: rgb(200,200,200);">Where the world connects</p>
+      </div>
     </div>
   </div>
-</nav>
+
+  <h3 class="text-center">Tell us what's new!</h3>
+  <!--container del mensaje nuevo-->
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+      </div><!-- end of col 2-->
+
+      <div class="col-8">
+        <div class="input-group mb-3">
+          <button class="btn btn-outline-secondary" type="button" id="button_send">Send</button>
+          <input type="text" class="form-control" placeholder="What's new?" id= input_send >
+        </div>
+        <div id="liveAlertPlaceholder"></div>
+      </div><!-- end of col 8-->
+      
+      <div class="col-2">
+      </div><!-- end of col 2-->
+      
+    </div><!-- end of row -->
+  </div><!-- end of container -->
+
+
+
+  <div class="container"> <!--container del card-->
+    <div class="row">
+      <div class="col-2">
+      </div><!-- end of col 2-->
+
+      <div class="col-8">
+        <div class="card">
+          <div class="card-body">
+            <p id="texto_send"></p>
+          </div>
+        </div>
+      </div><!-- end of col 8-->
+      
+      <div class="col-2">
+      </div><!-- end of col 2-->
+      
+    </div><!-- end of row -->
+  </div><!-- start of container -->
+  </main>
+  <footer class="footer mt-auto py-3 bg-light"><!--start of footer-->
+    <div class="container">
+      <span class="text-muted">© Yeeter</span>
+      <%= link_to 'Insatgram',"#" , class: 'text-muted' %>
+      <%= link_to 'Facebook',"#" , class: 'text-muted' %>
+      <%= link_to 'Yeeter',"#" , class: 'text-muted' %>
+    </div>
+
+  </footer><!--end of footer-->
+</body><!--end of body-->
+
+  <script>
+    var button_send = document.getElementById("button_send");
+    var input_send = document.getElementById("input_send");
+    var texto_send = document.getElementById("texto_send");
+    button_send.addEventListener("click", function(){
+      texto_send.innerHTML = input_send.value;
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+

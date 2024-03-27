@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <main>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="<%= root_path %>">HOME</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="<%= about_path %>">About</a>
+          <a class="nav-link" href="<%=contact_path%>">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container"><!--start of container contact-->
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-center">Contact</h1>
+      </div>
+    </div>
+  </div><!--end of container contact-->
+
+
+  <div class="container"><!--start of container contact-->
+    <div class="row">
+      <div class="col-3">
+      </div> 
+      <div class="col-6"><!--start of col-6-->
+        <div class="mb-3"><!--start of class mb-3-->
+          <label for="exampleFormControlInput1" class="form-label">Name</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Example Name">
+          <label for="exampleFormControlInput1" class="form-label">Email</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Example@...">
+          <label for="exampleFormControlInput1" class="form-label">Message</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Tell us your concern">
+          <button type="button" class="btn btn-secondary" id="submit_button">Submit</button>
+          <h4 id="message_end"class="text-center" style="color: rgb(111,111,111);"></h4>
+        </div><!--end of class mb-3-->
+      </div><!--end of col-6 -->
+      <div class="col-3">
+      </div> 
+    </div>
+  </div><!--end of container contact-->
+  <main>
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">© Yeeter</span>
+      <%= link_to 'Insatgram',"#" , class: 'text-muted' %>
+      <%= link_to 'Facebook',"#" , class: 'text-muted' %>
+      <%= link_to 'Yeeter',"#" , class: 'text-muted' %>
+    </div>
+  </footer>
+
+</body>
+
+<script>
+  document.getElementById("submit_button").addEventListener("click", function(){
+    document.getElementById("message_end").innerHTML = "Thank you for your message, we will contact you soon.";
+    setTimeout(function(){
+    location.reload();
+  }, 6000);
+  });
+</script>

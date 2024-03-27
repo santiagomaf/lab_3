@@ -6,4 +6,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "application#index"
+  
+  get "/about", to: "application#about"
+  
+  get "/contact", to: "application#contact"
+  
+  
 end
